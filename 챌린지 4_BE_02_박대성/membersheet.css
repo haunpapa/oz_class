@@ -1,0 +1,33 @@
+*{
+    text-align: center;
+    font-family: 'Dongle';
+    font-size: 20px;
+}
+html{
+    background-color: bisque;
+    background-clip: content-box;
+    box-shadow: inset 50;
+    width: 600px;
+    margin: auto;
+}
+body{
+    width: 400px;
+    height: 700px;
+    border: 5px double black;
+    background-color: aquamarine;
+    box-shadow: 10px 10px 10px violet, 20px 20px 10px blue,
+    30px 30px 10px red, 40px 40px 10px black;
+}
+selcet option[value=""][disabled]{
+    display: none;
+}
+fieldset{
+border: 0px;
+}
+input{
+    width: 300px;
+    height: 20px;
+}
+h1{
+    font-size: 2rem;
+}
