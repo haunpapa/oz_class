@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>별 트리 찍기</h1>
+    <p id = "onestar"></p>
+    <p id = "twostar"></p>
+    <p id = "thrstar"></p>
+
+
+    <script>
+        let onestar ="1번 별<br><br>";
+        let twostar ="2번 별<br><br>";
+        let thrstar ="3번 별<br><br>"; 
+
+        for (i = 0; i < 5; i++) {
+        let one = "";
+
+            for (j = 0; j <= i; j++) {
+            one += "*";
+            }
+            onestar += one + "<br>";
+        
+        }
+        document.getElementById("onestar").innerHTML=onestar;
+
+
+        // 2번 별
+        for (i = 0; i < 5; i++) {
+        let two = "";
+
+            for (j = 0; j <= i; j++) {
+            two += "*";
+            }
+            twostar += two + "<br>";
+
+            console.log(two);
+        }
+        document.getElementById("twostar").innerHTML=twostar;
+        for (i = 4; i >= 0; i--) {
+        let two = "";
+
+            for (j = 0; j <= i; j++) {
+            two += "*";
+            }
+
+            twostar += two + "<br>";
+
+            console.log(two);
+        }
+        document.getElementById("twostar").innerHTML=twostar;
+
+        for (i = 0; i < 5; i++) {
+            let thr = "";
+
+            for (j = 5; j > i; j--) {
+             thr += "&nbsp;";
+            }
+            for (k = 0; k < 2 * i + 1; k++) {
+            thr += "*";
+            }
+
+            thrstar += thr + "<br>"
+
+            console.log(thr);
+         }   
+         document.getElementById("thrstar").innerHTML=thrstar;
+        for (i = 5; i >= 0; i--) {
+             let thr = "";
+
+            for (j = 5; j > i; j--) {
+            thr += "&nbsp;";
+            }
+            for (k = 0; k < 2 * i + 1; k++) {
+            thr += "*";
+            }
+
+            thrstar += thr + "<br>"
+
+            console.log(thr);
+        }
+        document.getElementById("thrstar").innerHTML=thrstar;
+
+    
+
+    </script>
+</body>
+</html>

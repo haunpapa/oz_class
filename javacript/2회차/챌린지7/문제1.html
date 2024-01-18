@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 나의 중간고사 학점은 ?</h1>
+    <p id="score"></p>
+
+    <script>
+        let testScore = prompt("중간고사 성적을 입력하세요")
+        const p = document.getElementById("score")
+
+        if(testScore>=90){
+            p.textContent=`당신의 점수는 ${testScore} 학점은 A 입니다.`   
+        }else if(testScore>=80){
+            p.textContent=`당신의 점수는 ${testScore} 학점은 B 입니다.`  
+        }else if(testScore>=70){
+            p.textContent=`당신의 점수는 ${testScore} 학점은 C 입니다`
+        }else if(testScore>=60){
+            p.textContent=`당신의 점수는 ${testScore} 학점은 D 입니다`
+        }else{
+            p.textContent=`당신의 점수는 ${testScore} 학점은 F 입니다`
+        }
+
+    </script>
+    
+</body>
+</html>
