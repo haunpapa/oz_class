@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스톱워치</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> 스톱워치 !</h1>
+    <h1 id = "stopwatch"></h1>
+    <button type="button" id="strBtn">시작</button>
+    <button type="button" id="stoBtn">멈춤</button>
+    
+    <script>
+        let strTime = 0;
+        let stoTime = 0;
+        let min =0 ;
+        let seconds=0;
+        let milisec =0;
+        
+        let strBtn = document.getElementById("strBtn")
+        let stoBtn = document.getElementById("stoBtn")
+        let record = document.getElementById("stopwatch")
+
+        strBtn.addEventListener('click', function(){
+            strTime = Date.now();
+            stoTime = setInterval(function(){
+                let intervalTime = Date.now() - strTime;
+                milisec = Math.floor((intervalTime / 10)%100);
+                seconds = Math.floor((intervalTime / 1000)%60);
+                min = Math.floor((intervalTime / 60000) %60)
+                record.textContent = min + ":" + seconds + ":" + milisec; 
+                })
+                
+            },10)
+            
+
+        stoBtn.addEventListener('click',function(){
+            clearInterval(stoTime);
+
+            
+        })
+
+    </script>
+</body>
+</html>
