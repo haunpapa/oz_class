@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 멈춰!!</title>
+</head>
+<style>
+    .images{
+        width: 1000px;
+        height: 400px;
+        overflow: hidden;
+
+    }
+</style>
+<body>
+    <div class="images">
+        <img src="https://techrecipe.co.kr/wp-content/uploads/2022/08/220819_Beautiful-Landscapes_ai_0001.jpg"
+            id ="main" alt = ""/>
+        <img src="https://techrecipe.co.kr/wp-content/uploads/2022/08/220819_Beautiful-Landscapes_ai_0002.jpg"
+            alt = ""/>
+        <img src="https://techrecipe.co.kr/wp-content/uploads/2022/08/220819_Beautiful-Landscapes_ai_0003.jpg"
+            alt =""/>
+    </div>
+    <button id="stop">STOP</button>
+
+    <script>
+        const images = document.getElementById("main")
+        const button = document.getElementById("stop")
+
+        const images_Arr = ["https://techrecipe.co.kr/wp-content/uploads/2022/08/220819_Beautiful-Landscapes_ai_0001.jpg",
+        "https://techrecipe.co.kr/wp-content/uploads/2022/08/220819_Beautiful-Landscapes_ai_0002.jpg",
+        "https://techrecipe.co.kr/wp-content/uploads/2022/08/220819_Beautiful-Landscapes_ai_0003.jpg"]
+        let i = 0
+        function changeImages(){
+            if(i >= images_Arr.length){
+                i = 0
+            }
+            images.src = images_Arr[i]
+            i += 1
+        }
+        settime = setInterval(changeImages, 1000)
+
+        button.addEventListener("click", function(){
+            clearInterval(settime)
+        })
+        
+    </script>
+    
+</body>
+</html>
