@@ -39,6 +39,10 @@
                 <button type="submit" class="btn btn-success">조회</button>
                 <!-- 조회버튼 코드를 넣어주세요 -->
               </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-success">삭제</button>
+                <!-- 조회버튼 코드를 넣어주세요 -->
+              </div>
           </form>
           <br>
     <div class="container mt-4">
@@ -46,6 +50,7 @@
             <thead>
                 <!-- 열의 속성값을 나타내는 코드를 작성해주세요 (예 : 카테고리, 브랜드, 상품명, 가격) -->
                 <tr>
+                    <th scope="col"></th>
                     <th scope="col">카테고리</th>
                     <th scope="col">브랜드</th>
                     <th scope="col">상품명</th>
@@ -91,13 +96,19 @@
       
       const dataTable = document.getElementById('data-table');
       
-      data.forEach((item) => {
+      data.forEach((item, index) => {
           const row = dataTable.insertRow();
-          row.insertCell(0).innerHTML = item.category;
-          row.insertCell(1).innerHTML = item.brand;
-          row.insertCell(2).innerHTML = item.product;
-          row.insertCell(3).innerHTML = item.sex;
-          row.insertCell(4).innerHTML = item.price;
+          const checkboxCell =row.insertCell(0);
+          const checkbox = document.createElement('input');
+          checkbox.type ='checkbox';
+          checkbox.id = 'checkbox' + index;
+          checkboxCell.appendChild(checkbox);
+
+          row.insertCell(1).innerHTML = item.category;
+          row.insertCell(2).innerHTML = item.brand;
+          row.insertCell(3).innerHTML = item.product;
+          row.insertCell(4).innerHTML = item.sex;
+          row.insertCell(5).innerHTML = item.price;
       });
 
       let time = document.getElementById('time')
@@ -105,7 +116,7 @@
       let year = now.getFullYear();
       let month = now.getMonth() + 1;
       let day = now.getDate(); 
-      let now_time = (year+"-0"+month+ "-" + day )
+      let now_time = `(${year}-0${month}-${day})`
       time.append(now_time)
       console.log(now_time)
 
