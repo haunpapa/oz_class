@@ -19,3 +19,16 @@ CREATE TABLE board (
     user_id INT,
     FOREIGN KEY (user_id) REFERENCES user(id)
 );
+
+
+USE oz_project;
+
+CREATE TABLE items(
+	product_id INT AUTO_INCREMENT PRIMARY KEY, 
+	brand varchar(30),
+    product_main_title varchar(100),
+    product_sub_title varchar(100),
+    recent_price INT,
+    launching_price INT,
+    wish_count INT
+    );
