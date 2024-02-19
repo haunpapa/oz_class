@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이스크림 천국</title>
+</head>
+<body>
+    <button id="add">아이스크림 종류 추가</button>
+    <button id="list">아이스크림 이름 출력</button>
+    <button id="display">입력한 아이스크림 출력</button>
+
+    <h1>입력한 아이스크림 목록</h1>
+    <h1 id="icecream"></h1>
+
+    <script>
+        const add_ice = document.getElementById("add")
+        const list_ice = document.getElementById("list")
+        const display_ice = document.getElementById("display")
+        const result = document.getElementById("icecream")
+        const order_list = []
+        
+
+
+        add_ice.addEventListener("click",function(){
+            let order = prompt("원하는 아이스크림을 주문해주세요")
+            order_list.push(order)
+            
+        })
+
+        list_ice.addEventListener("click",function(){
+            for(item of order_list){
+                alert(item)
+            }
+        })
+        display_ice.addEventListener("click", function(){
+            result.append(order_list)
+        })
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사 양식</title>
+</head>
+<body>
+    <header>
+     <h1> 설문조사 양식</h1>
+     <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+    </header>
+    <hr>
+    <main>
+     <form>
+        <fieldset>
+            <legend>개인정보</legend>
+            <label for="'name">이름</label>
+            <input type="text" id="name"  name="name"
+            placeholder="본명을 입력하세요">
+            <br>
+            <label for="'email">이메일</label>
+            <input type="text" id="email" name="email"
+            placeholder="메일주소를 입력하세요">
+        </fieldset>
+        <fieldset>
+            <legend>설문</legend>
+
+            <p>겨울 휴가는 어디로 가시나요?</p>
+            <input type="radio" id="jeju" name="vacation">
+            <label for="jeju">제주도</label>
+            <input type="radio" id="ski" name="vacation">
+            <label for="ski">스키장</label>
+            <input type="radio" id="hotel" name="vacation">
+            <label for="hotel">호캉스</label>
+            <input type="radio" id="abroad" name="vacation">
+            <label for="abroad">해외여행</label>
+            <input type="radio" id="other" name="vacation">
+            <label for="other">그 외의 지역</label>
+            <input type="radio" id="gowork" name="vacation">
+            <label for="gowork">출근 한다</label>
+            <input type="radio" id="none" name="vacation">
+            <label for="none">계획이 없다</label>
+
+            <p>겨울휴가 예산은 어떻게 되시나요?</p>
+            <input type="radio" id="none" name="budget">
+            <label for="none">저축할껀데요?</label>
+            <input type="radio" id="30" name="budget">
+            <label for="30">30만원이하</label>
+            <input type="radio" id="50" name="budget">
+            <label for="50">30~50만원</label>
+            <input type="radio" id="100" name="budget">
+            <label for="100">50~100만원</label>
+            <input type="radio" id="300" name="budget">
+            <label for="300">100~300만원</label>
+            <input type="radio" id="500" name="budget">
+            <label for="500">300~500만원</label>
+            <input type="radio" id="1000" name="budget">
+            <label for="1000">500만원이상</label>
+            
+            <p>겨울휴가 누구와 가시나요?</p>
+            <input type="checkbox" id="solo" name="who">
+            <label for="solo">나혼자 간다</label>
+            <input type="checkbox" id="lover" name="who">
+            <label for="lover">애인</label>
+            <input type="checkbox" id="family" name="who">
+            <label for="family">가족</label>
+            <input type="checkbox" id="friend" name="who">
+            <label for="friend">친구</label>
+            <input type="checkbox" id="worker" name="who">
+            <label for="worker">직장동료</label>
+            <input type="checkbox" id="none" name="who">
+            <label for="none">안가요</label>
+        </fieldset>
+        <fieldset>
+            <legend>기타의견</legend>
+            <textarea rows="3" cols="30" name="comment"></textarea>
+        </fieldset>
+        <input type="submit">
+
+     </form>
+    </main>
+    <hr>
+    <footer>
+     <p>입력하느라 수고하셨습니다.</p>
+    </footer>
+</body>
+</html>

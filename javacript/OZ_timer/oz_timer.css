@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    
+}
+html{
+    background: linear-gradient(to top, black,grey);
+    height: 100%;
+
+}
+
+.footer {
+    font-size: 12px;
+    text-align: center;
+}
+.footer a {
+    color: hsl(0, 0%, 100%);
+    opacity: 20%;
+    text-decoration: none;  
+}
+
+.container {
+    margin: auto;
+    padding: auto;
+    width: 700px;
+    height: 150px;
+    font-size: 3.2rem;
+    text-align: center;
+    color: rgb(43, 255, 0);
+    opacity: 100%;
+    font-weight: 900;
+   
+}
+.day{
+    width: 120px;
+    height: 80px;
+    margin: 3px;
+    display: inline-block;
+}
+.hour{
+    width: 120px;
+    height: 80px;
+    margin: 3px;
+    display: inline-block;
+}
+.min{
+    width: 120px;
+    height: 80px;
+    margin: 3px;
+    display: inline-block;
+}
+.second{
+    width: 120px;
+    height: 80px;
+    margin: 3px;
+    display: inline-block;
+}
+#title{
+    text-align: center;
+    margin-top: 150px;
+    font-weight: 900;
+    font-size: 3rem;
+    opacity: 65%;
+}
+#day{
+    margin: 0;
+    padding: 0;
+}

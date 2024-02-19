@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  html,body {
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+    position: relative;
+  }
+
+  .container{
+    width: 250px;
+    height: 260px;
+    background-color: aqua;
+    margin: auto;
+    padding: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+
+  .display_input{
+   height: 50px; 
+   padding-top: 10px;
+   font-size: 2rem;
+   margin-bottom: 15px;
+   text-align: center;
+  }
+  
+  .display{
+    width: 220px;
+    height: 40px; 
+    border: 0px solid white;
+    border-radius: 3px;
+
+  }
+
+
+  .button {
+    width : 50px;
+    height: 40px;
+    margin : 3px;
+    padding: 0px;
+    border: 0px solid black;
+    border-radius: 4px;
+
+  }
+
+  .button:hover{
+    background-color: burlywood;
+  }
